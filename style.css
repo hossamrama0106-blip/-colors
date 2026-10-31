@@ -1,0 +1,31 @@
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1d1b;--mut:#6b6b66;--line:#e3e0d8;--ok:#1b8a3f;--mid:#c27c0e;--bad:#b3261e;--old:#555;--acc:#0f5c4d}
+@media(prefers-color-scheme:dark){:root{--bg:#161615;--card:#222221;--ink:#f1efe9;--mut:#a3a29b;--line:#38372f;--acc:#3fb59e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.6}
+header,main,footer{max-width:900px;margin:auto;padding:0 16px}
+header{padding-top:24px}h1{margin:0;color:var(--acc)}header p{color:var(--mut);margin:.3rem 0 1rem}
+#drop{border:2px dashed var(--line);border-radius:16px;background:var(--card);min-height:170px;display:flex;align-items:center;justify-content:center;gap:16px;padding:16px;text-align:center;flex-wrap:wrap;outline:none}
+#drop.over,#drop:focus{border-color:var(--acc)}
+#dropText{display:flex;flex-direction:column;gap:8px;align-items:center}
+#dropText span{color:var(--mut)}
+.btn{background:var(--acc);color:#fff;padding:8px 18px;border-radius:10px;cursor:pointer;display:inline-block;margin:2px}
+button.btn{border:0;font:inherit}
+.btn.alt{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+#preview{max-height:220px;max-width:100%;border-radius:10px}
+#status{margin:12px 0;color:var(--mut);min-height:1.6em}
+.group{margin:18px 0}
+.group>h2{font-size:1rem;color:var(--mut);margin:0 0 8px}
+.card{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+.card.best{border-width:2px}
+.card img{width:130px;height:130px;object-fit:cover;border-radius:10px;background:var(--line);flex:none}
+.info{flex:1;min-width:0}.info h3{margin:0 0 4px;font-size:1.05rem}
+.info a{color:var(--acc)}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.82rem;color:#fff;margin-inline-end:6px}
+.b-ok{background:var(--ok)}.b-mid{background:var(--mid)}.b-bad{background:var(--bad)}.b-old{background:var(--old)}.b-av{background:var(--acc)}
+.bar{height:8px;background:var(--line);border-radius:6px;margin:8px 0 2px;overflow:hidden}.bar i{display:block;height:100%}
+.verdict{font-weight:600;margin:4px 0}
+.small{color:var(--mut);font-size:.85rem}
+footer{color:var(--mut);font-size:.85rem;padding-bottom:30px}
+@media(max-width:520px){.card img{width:96px;height:96px}}
+.queryRow{border-top:1px solid var(--line);margin-top:20px;padding-top:10px}
+.queryRow>img{height:80px;border-radius:8px}
